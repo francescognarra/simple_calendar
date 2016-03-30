@@ -30,11 +30,11 @@ module SimpleCalendar
     end
     # Returns array of dates between start date and end date for selected month
     def build_range(selected_month, options)
-      #start_date = selected_month.beginning_of_month.beginning_of_week(options[:start_day])
-      #end_date   = selected_month.end_of_month.end_of_week(options[:start_day])
+      start_date = selected_month.beginning_of_month.beginning_of_week(options[:start_day])
+      end_date   = selected_month.end_of_month.end_of_week(options[:start_day])
       #With this update only days of current month are displayed
-      start_date = selected_month.beginning_of_month
-      end_date   = selected_month.end_of_month
+      #start_date = selected_month.beginning_of_month
+      #end_date   = selected_month.end_of_month
 
       (start_date..end_date).to_a
     end
